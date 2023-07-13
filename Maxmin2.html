@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            let minimo,maximo;
+            //Declaración de variables globales del programa
+
+            var Tabla = new Array(5); //crear una tabla para almacenar 5 numeros
+                                      //del 0 al 5
+
+            function rellenar()
+            {
+            //función para rellenar los 5 numeros
+                for(var i=0; i<5; i++)
+                {
+                  Tabla[i]=prompt("Dame un número","0");
+                }
+            }
+
+            function calcular_minimo(Tabla)
+            {
+            //función que calcula el mínimo
+              Tabla.sort();
+              //Ordenamos la tabla;
+              return Tabla[0];
+              //Automaticamente el primer valor de la tabla es el mas pequeño
+            }
+
+            function calcular_maximo(Tabla)
+            {
+            //función que calcula el máximo
+              Tabla.sort();
+              //Ordenamos la tabla;
+              return Tabla[4];
+              //Automaticamente el último valor de la tabla es el mas grande
+            }
+        </script>
+    </head>
+    <body>
+        <h1 align="center"><U>MÁXIMO Y MÍNIMO</U></H1>
+        <script>        
+        rellenar();
+        minimo=0;
+
+        minimo = calcular_minimo(Tabla);
+        maximo = calcular_maximo(Tabla);
+
+        document.writeln("<h4>Los números que has introducido són:");
+        document.writeln(" "+Tabla[0]+", "+Tabla[1]+", "+Tabla[2]+", "+Tabla[3]+ " y " +Tabla[4]);
+        document.writeln("</h4>");
+        //document.writeln("<br>");
+        document.writeln("<h4>El número mínimo es <font color='red'>");
+        document.writeln(minimo+"</font>.</h4>");
+        //document.writeln("<br>");
+        document.writeln("<h4>El número máximo es <font color='red'>");
+        document.writeln(maximo+"</font>.</h4>");
+        </script>
+    </body>
+</html>

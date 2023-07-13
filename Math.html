@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            th{
+                font-family: arial;
+                font-weight: bold;
+                font-size: 12pt;
+                color:red;
+                text-align: left;
+            }
+            h1, table, img {
+                text-align:center;
+            }
+        </style>
+        <script>
+            var radio;
+            function circunferencia(radio)
+            {
+            var resultado = 2 * Math.PI * radio;
+            //Calculamos el área o perímetro de la circunferencia
+            return resultado;
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align:center"><u>CÁLCULOS MATEMÁTICOS</u></h1>
+        <script>
+            alert("Vamos a realizar el cálculo del área de una circunferencia");
+            radio = prompt("Introduce el valor del radio","0");
+            //Pedimos un radio para calcular el área de la circunferencia
+            document.write("<table>");
+            document.write("<tr><td><br><img src='imagenes/cir.gif'></td>");
+            document.write("<td>&nbsp;</td>");//Imprime un espacio en blanco
+            document.write("<th>Radio = " +radio);
+            document.write("<br>RESULTADO = "+circunferencia(radio)+"</th></tr>");
+            //llamamos a la función circunferencia y mostramos el resultado
+        </script>
+    </body>
+</html>
